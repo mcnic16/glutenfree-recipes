@@ -8,8 +8,5 @@ from glutenfree.models import Cuisine, Starters
 def home():
     return render_template("cuisine.html")
 
-@app.route("/addcuisine", methods=["GET", "POST"])
-def addcuisine():
-    
 
 

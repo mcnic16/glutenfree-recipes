@@ -2,7 +2,7 @@ from glutenfree import db
 
 class Cuisine(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    cuisine_type = db.Column(db.Text, unique=True nullable=False)
+    cuisine_type = db.Column(db.Text, unique=True, nullable=False)
     cuisine_name = db.Column(db.Text, unique=True, nullable=False)
     cuisine_tools = db.Column(db.Text, unique=True, nullable=False)
     cuisine_ingredients = db.Column(db.Text, unique=True, nullable=False)
@@ -46,8 +46,8 @@ class Desserts(db.Model):
 
 class Drinks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    drinks = db.relationship("Cuisine", backref="drinks", cascade="all, delete", lazy=True)
-    drinks_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
+    drinks = db.relationship("Cuisine", backref="cuisine", cascade="all, delete", lazy=True)
+    drinks_id = db.Column(db.Integer, db.ForeignKey("cuisine.id", ondelete="CASCADE"), nullable=False)
 
     def __repr__(self):
         return f"Drinks'{self.id}', '{self.drinks}', \
