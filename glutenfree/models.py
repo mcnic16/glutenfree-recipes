@@ -13,7 +13,9 @@ class Cuisine(db.Model):
     drinks = db.relationship("Drinks", backref="cuisine", cascade="all, delete", lazy=True)
 
     def __repr__(self):
-        return f"Cuisine('{self.id}', '{self.starters_id}', '{self.mains_id}', '{self.desserts_id}','{self.drinks_id}', '{self.starters}', '{self.mains}, '{self.desserts}', '{self.drinks}')"
+        return f"Cuisine('{self.id}', '{self.starters_id}', \
+        '{self.mains_id}', '{self.desserts_id}','{self.drinks_id}',\
+        '{self.starters}', '{self.mains}, '{self.desserts}', '{self.drinks}')"
 
 
 
@@ -25,7 +27,9 @@ class Starters(db.Model):
     starters_directions = db.Column(db.Text, unique=True, nullable=False)
 
     def __repr__(self):
-        return f"Starters('{self.id}', '{self.starters_name}', '{self.starters_tools}', '{self.starters_ingredients}', '{self.starters_directions}')"
+        return f"Starters('{self.id}', '{self.starters_name}', \
+        '{self.starters_tools}', '{self.starters_ingredients}', \
+        '{self.starters_directions}')"
 
 
 
@@ -38,7 +42,8 @@ class Mains(db.Model):
     mains_directions = db.Column(db.Text, unique=True, nullable=False)
 
 def __repr__(self):
-        return f"Mains('{self.id}', '{self.mains_name}', '{self.mains_tools}', '{self.mains_ingredients}', '{self.mains_directions}')"
+        return f"Mains('{self.id}', '{self.mains_name}', '{self.mains_tools}', \
+        '{self.mains_ingredients}', '{self.mains_directions}')"
 
 
 
@@ -51,7 +56,9 @@ class Desserts(db.Model):
     desserts_directions = db.Column(db.Text, unique=True, nullable=False)
 
     def __repr__(self):
-        return f"Desserts('{self.id}','{self.desserts_name}', '{self.desserts_tools}', '{self.desserts_ingredients}', '{self.dessert_directions}')"
+        return f"Desserts('{self.id}','{self.desserts_name}', \
+        '{self.desserts_tools}', '{self.desserts_ingredients}', \
+        '{self.dessert_directions}')"
 
 
 class Drinks(db.Model):
@@ -63,5 +70,8 @@ class Drinks(db.Model):
     drinks_directions = db.Column(db.Text, unique=True, nullable=False)
 
     def __repr__(self):
-        return f"Drinks('{self.id}', '{self.drinks_name}', '{self.drinks_tools}', '{self.drinks_ingredients}', '{self.drinks_directions}')"
+        return f"Drinks('{self.id}', '{self.drinks_name}', \
+        '{self.drinks_tools}' '{self.drinks_ingredients}', \
+        '{self.drinks_directions}')"
+
 
