@@ -18,9 +18,9 @@
 <body>
 
 <header>
-    <nav class="blue" style="padding:0px 10px; position: fixed;">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">GlutenFree Recipes</a>
+    <nav class="blue" style="padding:0px 10px;">
+        <div class="nav-wrapper ">
+            <a href="#" class="brand-logo text-align: center">GlutenFree Recipes</a>
 
             <a href="#" class="sidenav-trigger" data-target="mobile-nav">
                 <i class="material-icons">menu</i>
@@ -48,8 +48,8 @@
 </header>
 
 <main class="container">
-    {& block content &}
-    {& end block &}
+    {% block content %}
+    {% endblock %}
 
 </main>
 
