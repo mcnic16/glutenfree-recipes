@@ -28,7 +28,7 @@
 
             <ul class="right hide-on-med-and-down ">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="">Starters</a></li>
+                <li><a href="{{ url_for('cuisine') }}">Starters</a></li>
                 <li><a href="">Mains</a></li>
                 <li><a href="">Desserts</a></li>
                 <li><a href="">Drinks</a></li>
@@ -39,8 +39,7 @@
 
     <ul class="sidenav" id="mobile-nav">
         <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="">Cuisine</a></li>
-                <li><a href="">Starters</a></li>
+                <li><a href="{{ url_for('cuisine') }}">Starters</a></li>
                 <li><a href="">Mains</a></li>
                 <li><a href="">Desserts</a></li>
                 <li><a href="">Drinks</a></li>
